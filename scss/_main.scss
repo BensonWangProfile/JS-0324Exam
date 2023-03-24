@@ -1,0 +1,196 @@
+// setting
+h1 {
+  font-size: 80px;
+  line-height: 106px;
+  font-weight: 900;
+}
+h2 {
+  font-size: 64px;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 84px;
+  margin-top: 56px;
+  @include sm {
+    font-size: 45px;
+  }
+}
+p {
+  font-size: 24px;
+  line-height: 42px;
+}
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+.text-white {
+  color: #ffffff;
+}
+// position setting
+.container-center {
+  width: 304px;
+  height: 342px;
+  margin: 0 auto;
+}
+.container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box-img {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  row-gap: 48px;
+  font-weight: 500;
+  @include lg {
+    .img-box:nth-child(-n + 3) {
+      width: 30%;
+      overflow: hidden;
+      // img {
+      // }
+    }
+  }
+  @include md {
+    .img-box:nth-child(-n + 3) {
+      width: 100%;
+    }
+    img {
+      width: 425px;
+    }
+  }
+  @include sm {
+    img {
+      width: 300px;
+    }
+  }
+}
+////////////////////////////////////////
+
+.header {
+  max-width: 100%;
+  height: 958px;
+  background: url("../img/banner.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .header-box-content {
+    margin-top: 32px;
+  }
+  .box-icon {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+// ================= main =================
+.main {
+  img {
+    margin: 40px 0 20px;
+  }
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    .main-content-box {
+      text-align: center;
+      line-height: 36px;
+      height: 72px;
+      font-size: 24px;
+    }
+  }
+  .main-list {
+    width: 384px;
+    height: 152px;
+    padding: 28px 21px 0;
+    margin-top: 24px;
+    border-top: 1px solid #000000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include sm {
+      padding: 28px 0;
+      margin-top: 50px;
+    }
+    li {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 42px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      &::before {
+        // content: "\2022";
+        content: "";
+        display: inline-block;
+        // font-size: 50px;
+        width: 22px;
+        height: 22px;
+        border-radius: 100%;
+        margin-right: 16px;
+        // color: #891818;
+        background: #891818;
+      }
+    }
+  }
+}
+// ================= mybrand =================
+.container-brand {
+  background: #000;
+  margin-top: 56px;
+  padding-bottom: 160px;
+  .brand-content {
+    margin: 32px 0 68px;
+    text-align: center;
+    font-size: 20px;
+    width: 320px;
+    line-height: 30px;
+  }
+  //   .brand-img {
+  //     img:first-child {
+  //       margin-bottom: 16px;
+  //     }
+  //   }
+}
+// ================= work =================
+.container-work {
+  padding-bottom: 144px;
+  .work-content {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    margin: 16px 0 56px;
+  }
+  .img-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .img-content {
+      margin-top: 16px;
+      font-size: 20px;
+      line-height: 40px;
+    }
+  }
+}
+// ================= footer =================
+.container-footer {
+  background: #000;
+  padding-bottom: 64px;
+  .footer-content {
+    p {
+      margin-top: 16px;
+    }
+  }
+}
